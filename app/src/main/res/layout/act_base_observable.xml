@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <import type="com.zmj.databindingpractice.entry.GoodsBean"/>
+        
+        <import type="com.zmj.databindingpractice.ui.activity.L3BaseObservableAct.GoodsHandler"/>
+
+        <variable
+            name="goods"
+            type="GoodsBean" />
+
+        <variable
+            name="goodsHandler"
+            type="GoodsHandler" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ui.activity.L3BaseObservableAct" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:text="@{goods.name}"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:text="@{goods.details}"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:text="@{String.valueOf(goods.price)}"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/changeName"
+            android:onClick="@{() -> goodsHandler.changeGoodsName()}"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/changeName"
+            android:onClick="@{() -> goodsHandler.changeGoodsDetails()}"/>
+    </LinearLayout>
+</layout>

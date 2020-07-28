@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.zmj.databindingpractice">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:name=".App"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".ui.activity.L2DataSingleDoubleBindingAct"></activity>
+        <activity android:name=".ui.activity.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.activity.L3BaseObservableAct" />
+        <activity android:name=".ui.activity.L4ObservableFieldAct" />
+        <activity android:name=".ui.activity.L5ObservableCollectionAct" />
+        <activity android:name=".ui.activity.L6EventBindingAct" />
+        <activity android:name=".ui.activity.L7ViewStubAndIncludeAct" />
+        <activity android:name=".ui.activity.L8SetAct" />
+        <activity android:name=".ui.activity.L9BindingAdapterConversionAct" />
+        <activity android:name=".ui.activity.L10ResourceLinkAct" />
+        <activity android:name=".ui.activity.L11FragmentAct" />
+        <activity android:name=".ui.activity.L12RecyclerAct" />
+        <activity android:name=".ui.activity.L13ObservableArrayListAct" />
+    </application>
+
+</manifest>

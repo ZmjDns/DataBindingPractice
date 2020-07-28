@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="com.zmj.databindingpractice.entry.UserBean"/>
+
+        <variable
+            name="userInfo"
+            type="UserBean" />
+
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@android:color/holo_orange_dark"
+            android:gravity="center"
+            android:text="@{userInfo.name}"/>
+
+    </LinearLayout>
+</layout>

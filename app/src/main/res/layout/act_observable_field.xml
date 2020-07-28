@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <import type="com.zmj.databindingpractice.entry.ObservableGoodsBean"/>
+        <import type="com.zmj.databindingpractice.ui.activity.L4ObservableFieldAct.ObservableGoodsHandler"/>
+
+        <variable
+            name="goodsBean"
+            type="ObservableGoodsBean" />
+
+        <variable
+            name="goodsHandler"
+            type="ObservableGoodsHandler" />
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:textSize="18sp"
+            android:text="@{goodsBean.name}"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:textSize="18sp"
+            android:text="@{goodsBean.details}"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:textSize="18sp"
+            android:text="@{String.valueOf(goodsBean.price)}"/>
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/changeName"
+            android:onClick="@{() -> goodsHandler.changeGoodsName()}"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/changeName"
+            android:onClick="@{() -> goodsHandler.changeDetailsAndPrice()}"/>
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <import type="com.zmj.databindingpractice.entry.UserBean"/>
+        <import type="com.zmj.databindingpractice.ui.activity.L6EventBindingAct.UserPresenter"/>
+        <import type="com.zmj.databindingpractice.common.StringUtilsKt"/>
+        <!--import type="com.zmj.databindingpractice.common.StrUtils"/-->
+
+        <variable
+            name="userInfo"
+            type="UserBean" />
+
+        <variable
+            name="userPresenter"
+            type="UserPresenter" />
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.activity.L6EventBindingAct">
+
+        <TextView
+            style="@style/TextStyle"
+            android:onClick="@{() -> userPresenter.onUserNameClick(userInfo)}"
+            android:text="@{StringUtilsKt.str2UpperCase(userInfo.name)}"/>
+
+        <TextView
+            style="@style/TextStyle"
+            android:onClick="@{() -> userPresenter.onUserNameClick(userInfo)}"
+            android:text="@{userInfo.passWord}"/>
+
+        <EditText
+            style="@style/TextStyle"
+            android:afterTextChanged="@{userPresenter::afterTextChanged}"
+            android:hint="@string/userName"/>
+
+        <EditText
+            style="@style/TextStyle"
+            android:afterTextChanged="@{userPresenter::afterPassWordChanged}"
+            android:hint="@string/password"/>
+    </LinearLayout>
+</layout>

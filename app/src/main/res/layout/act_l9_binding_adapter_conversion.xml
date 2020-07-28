@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="com.zmj.databindingpractice.entry.ImageBean"/>
+        <import type="com.zmj.databindingpractice.ui.activity.L9BindingAdapterConversionAct.Handler"/>
+        
+        <variable
+            name="image"
+            type="ImageBean" />
+        <variable
+            name="handler"
+            type="Handler" />
+
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".ui.activity.L9BindingAdapterConversionAct">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_launcher_background"
+            bind:url="@{image.url}"/>
+
+        <Button
+            android:id="@+id/change_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> handler.onCLick(image)}"
+            android:text='@{"改变图片Url"}'/>
+
+        <TextView
+            style="@style/TextStyle"
+            android:text='@{"XXXXX" + image.url}'/>
+
+        <TextView
+            style="@style/TextStyle"
+            android:background='@{"红色"}'
+            android:text="@string/blueTextRedBg"
+            android:textColor='@{"蓝色"}'/>
+
+        <TextView
+            style="@style/TextStyle"
+            android:background='@{"蓝色"}'
+            android:text="@string/redTextBlueBg"
+            android:textColor='@{"红色"}'/>
+
+
+
+
+    </LinearLayout>
+</layout>

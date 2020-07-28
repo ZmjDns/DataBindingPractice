@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="com.zmj.databindingpractice.entry.UserBean"/>
+        <import type="com.zmj.databindingpractice.ui.activity.L7ViewStubAndIncludeAct.EventHandler"/>
+
+        <variable
+            name="userInfo"
+            type="UserBean" />
+
+        <variable
+            name="handler"
+            type="EventHandler" />
+
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".ui.activity.L7ViewStubAndIncludeAct">
+
+        <Button
+            android:id="@+id/btn_show"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/showView"
+            android:onClick="@{handler::onClick}"/>
+
+        <include
+            layout="@layout/view_include"
+            bind:userInfo="@{userInfo}"/>
+
+        <ViewStub
+            android:id="@+id/view_stub"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout="@layout/view_stub"
+            bind:userInfo="@{userInfo}"/>
+    </LinearLayout>
+</layout>

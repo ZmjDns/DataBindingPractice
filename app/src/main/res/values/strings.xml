@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">DataBindingPractice</string>
+    <string name="singleBinding">单向数据绑定：</string>
+    <string name="doubleBinding">双向数据绑定：(即TextView数据跟据EditText的输入改变而改变)</string>
+    <string name="singleDoubleBinding">数据单向/双向绑定</string>
+    <string name="changeName">改变name</string>
+    <string name="baseObservable">baseObserable</string>
+    <string name="observableField">observableField</string>
+    <string name="changeData">改变数据</string>
+    <string name="observableCollect">observable集合</string>
+    <string name="userName">用户名</string>
+    <string name="password">密码</string>
+    <string name="bindEvent">事件绑定</string>
+    <string name="showView">显示View</string>
+    <string name="viewStubIncludeBinding">ViewStub/Include绑定</string>
+    <string name="setSystem">集合框架</string>
+    <string name="blueTextRedBg">红色背景蓝色字</string>
+    <string name="redTextBlueBg">蓝色背景红色字</string>
+    <string name="convert">adapter/conversion转换</string>
+
+    <string name="format">%s is %s</string>
+    <string name="sourceLink">资源引用</string>
+    <string name="fragment">fragment</string>
+    <string name="recycler">Recycler</string>
+    <string name="addOne">添加一个</string>
+    <string name="addSome">添加多个</string>
+    <string name="removeOne">删除一个</string>
+    <string name="updateOne">更新一个</string>
+    <string name="observableList">observableList</string>
+</resources>
